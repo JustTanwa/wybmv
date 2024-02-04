@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
       // Create an image element for the happy cat
       const catImage = document.createElement('img');
       catImage.classList.add('cat-image');
-      catImage.src = '../assets/cat1_no_background.png'; // You can replace this with any other happy cat image
+      catImage.src = './assets/cat1_no_background.png'; // You can replace this with any other happy cat image
       catImage.alt = 'Happy Cat';
       container.appendChild(catImage);
 
@@ -39,9 +39,9 @@ document.addEventListener('DOMContentLoaded', function() {
       // Change cat image
       const catImage = document.getElementById('cat-image');
       if (noClickCount === 1 ) {
-        catImage.src = '../assets/cat_surprised.png'
+        catImage.src = './assets/cat_surprised.png'
       } else if (noClickCount > 2 ) {
-        catImage.src = '../assets/cat_cry.png'
+        catImage.src = './assets/cat_cry.png'
       }
 
       // Get window dimensions
