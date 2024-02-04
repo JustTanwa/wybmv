@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Will You Be My Valentine? ❤️ </title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #FFF5E1;
+      /* Light pastel color */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      text-align: center;
+      color: #333;
+      /* Darker text color */
+    }
+
+    h1 {
+      color: #FF6B6B;
+      /* Coral color */
+      margin-bottom: 20px;
+    }
+
+    .cat-image {
+      width: 300px;
+      /* Adjust width as needed */
+      height: auto;
+      /* Maintain aspect ratio */
+      margin-top: 20px;
+    }
+
+    .button-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      user-select: none;
+      /* Prevent text selection */
+    }
+
+    button.yes {
+      background-color: #FFB6C1;
+      /* Light pink */
+      color: #fff;
+      margin-right: 10px;
+    }
+
+    button.no {
+      background-color: #87CEEB;
+      /* Light blue */
+      color: #fff;
+    }
+
+    button.yes:hover {
+      background-color: #FF69B4;
+      /* Darker pink */
+    }
+
+    button.no:hover {
+      background-color: #00BFFF;
+      /* Darker blue */
+    }
+
+    .message {
+      font-size: 24px;
+      font-weight: bold;
+      color: #FF6B6B;
+      /* Darker text color */
+      margin-top: 20px;
+      text-shadow: 2px 2px 4px rgba(255, 85, 187, 0.4);
+      /* Add text shadow for emphasis */
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Will You Be My Valentine? ❤️</h1>
+    <img class="cat-image" src="../assets/cat2_no_background.png" alt="In love cat illustraction" id="cat-image">
+    <div class="button-wrapper">
+      <button class="yes">Yes</button>
+      <button class="no">No</button>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+
+</body>
+
+</html>
