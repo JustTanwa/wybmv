@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const gridContainer = document.querySelector('.grid-container');
   const resetButton = document.querySelector('.reset-button');
 
-  const emojis = ['😘', '😍', '👀', '🥳', '🥰', '🤣', '😚', '😈'];
+  const emojis = ['😘', '🐱', '👀', '🤏🏼', '🥰', '🤣', '🍉', '😈'];
   const shuffledEmojis = emojis.concat(emojis).sort(() => 0.5 - Math.random());
   let firstCard = null;
   let secondCard = null;
