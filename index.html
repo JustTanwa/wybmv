@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Will You Be My Valentine? ❤️ </title>
+  <link rel="icon" href="./assets/favicon_io/favicon.ico" type="image/x-icon">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -87,18 +88,74 @@
       text-shadow: 2px 2px 4px rgba(255, 85, 187, 0.4);
       /* Add text shadow for emphasis */
     }
+
+    /* Your existing CSS styles */
+    .container {
+      text-align: center;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(4, 100px);
+      grid-template-rows: repeat(4, 100px);
+      gap: 5px;
+      margin: 20px auto;
+      justify-content: center;
+      font-size: 16px;
+    }
+
+    .grid-item {
+      background-color: #cc5656;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 2em;
+    }
+
+    .reset-button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      background-color: #FFB6C1;
+      /* Light pink */
+      color: #fff;
+      transition: background-color 0.3s ease;
+    }
+
+    .reset-button:hover {
+      background-color: #FF69B4;
+      /* Darker pink */
+    }
+
+    @media screen and (max-width: 600px) {
+      .grid-container {
+        grid-template-columns: repeat(4, 60px);
+        grid-template-rows: repeat(4, 60px);
+      font-size: 12px;
+      }
+    }
   </style>
 </head>
 
 <body>
 
-  <div class="container">
+  <div class="container" id="intro">
     <h1>Will You Be My Valentine? ❤️</h1>
     <img class="cat-image" src="./assets/cat2_no_background.png" alt="Cat Illustration" id="cat-image">
     <div class="button-wrapper">
       <button class="yes">Yes</button>
       <button class="no">No</button>
     </div>
+  </div>
+
+  <div class="container" style="display: none;" id="memory-game">
+    <h1>Memory Matching Game</h1>
+    <div class="grid-container"></div>
+    <button class="reset-button">Reset</button>
   </div>
 
   <script src="index.js"></script>
