@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', function () {
       // Clear the canvas
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       const img = document.getElementById('egg')
-      ctx.drawImage(img, canvas.width / 2 - 50, 5, 100, 100);
+      ctx.drawImage(img, canvas.width / 2 - 50, 0, 100, 100);
 
       // Draw skee point board
       ctx.fillStyle = '#99BC85';
