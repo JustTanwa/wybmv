@@ -5,24 +5,191 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Happy Valentine's Day</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
   <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #FFF5E1;
+    }
+
     .container {
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 97vh;
+      flex-flow: column;
+      height: 90vh;
+    }
 
-      svg {
-        width: 50%;
-        height: 50%;
+    svg {
+      width: 50%;
+      height: 50%;
+    }
+
+    h2, h4 {
+      color: #FF6B6B;
+      /* Coral color */
+      margin-bottom: 20px;
+      text-align: center;
+      width: 100%;
+    }
+
+    .container .sparkles {
+      width: 50%;
+      display: block;
+    }
+
+    .container .sparkles>div {
+      position: relative;
+      width: 10px;
+      height: 10px;
+      border-radius: 100px;
+      background: #F37D79;
+      box-shadow: 0px 0px 12px 2px #fa759f;
+      top: 0;
+      opacity: 0;
+      -moz-animation: sparkle 4s ease-in-out infinite;
+      -webkit-animation: sparkle 4s ease-in-out infinite;
+      animation: sparkle 4s ease-in-out infinite;
+      animation-delay: 5s;
+    }
+
+    .container .sparkles>div:nth-child(1) {
+      left: 11%;
+      -moz-animation-delay: 5s;
+      -webkit-animation-delay: 5s;
+      animation-delay: 5s;
+    }
+
+    .container .sparkles>div:nth-child(2) {
+      left: 17%;
+      -moz-animation-delay: 6s;
+      -webkit-animation-delay: 6s;
+      animation-delay: 6s;
+    }
+
+    .container .sparkles>div:nth-child(3) {
+      left: 21%;
+      -moz-animation-delay: 5s;
+      -webkit-animation-delay: 5s;
+      animation-delay: 5s;
+    }
+
+    .container .sparkles>div:nth-child(4) {
+      left: 37%;
+      -moz-animation-delay: 7s;
+      -webkit-animation-delay: 7s;
+      animation-delay: 7s;
+    }
+
+    .container .sparkles>div:nth-child(5) {
+      left: 49%;
+      -moz-animation-delay: 8s;
+      -webkit-animation-delay: 8s;
+      animation-delay: 8s;
+    }
+
+    .container .sparkles>div:nth-child(6) {
+      left: 65%;
+      -moz-animation-delay: 6s;
+      -webkit-animation-delay: 6s;
+      animation-delay: 6s;
+    }
+
+    .container .sparkles>div:nth-child(7) {
+      left: 72%;
+      -moz-animation-delay: 8s;
+      -webkit-animation-delay: 8s;
+      animation-delay: 8s;
+    }
+
+    .container .sparkles>div:nth-child(8) {
+      left: 88%;
+      -moz-animation-delay: 7s;
+      -webkit-animation-delay: 7s;
+      animation-delay: 7s;
+    }
+
+    .container .sparkles>div:nth-child(9) {
+      left: 95%;
+      -moz-animation-delay: 5s;
+      -webkit-animation-delay: 5s;
+      animation-delay: 5s;
+    }
+
+    .container h4 {
+      text-align: center;
+      padding-top: 1em;
+      opacity: 0;
+      -moz-animation: show 4s ease-in-out forwards 1;
+      -webkit-animation: show 4s ease-in-out forwards 1;
+      animation: show 4s ease-in-out forwards 1;
+      animation-delay: 5s;
+    }
+
+    @-moz-keyframes sparkle {
+      50% {
+        opacity: 1;
+      }
+
+      100% {
+        top: -500px;
+      }
+    }
+
+    @-ms-keyframes sparkle {
+      50% {
+        opacity: 1;
+      }
+
+      100% {
+        top: -500px;
+      }
+    }
+
+    @keyframes sparkle {
+      50% {
+        opacity: 1;
+      }
+
+      100% {
+        top: -500px;
+      }
+    }
+
+    @-moz-keyframes show {
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @-ms-keyframes show {
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes show {
+      100% {
+        opacity: 1;
       }
     }
   </style>
 </head>
 
 <body>
+  <h2>Happy Valentine's Day</h2>
   <div class="container">
     <svg viewBox="0 0 512 512">
+      <filter id="shadow2">
+        <feDropShadow dx="10" dy="10" stdDeviation="8" flood-color="red" />
+      </filter>
+      <path filter="url(#shadow2)" class="circle glow" d="M 256, 256
+                             m 200, 0
+                             a 200,200 0 1,0 -400,0
+                             a 200,200 0 1,0  400,0
+                             " fill="none" stroke="#F37D79" stroke-width="3" />
       <path class="leafOne" d="M124.302,328.222c-2.466-2.901-5.036-5.334-7.648-7.212c-1.884-1.354-4.49-1.207-6.201,0.36
                                 c-32.608,29.866-18.892,84.017,24.01,94.752c2.251,0.563,4.612-0.548,5.624-2.636c0.407-0.841,0.781-1.732,1.138-2.648
                                 C111.438,394.378,103.302,355.204,124.302,328.222z" />
@@ -64,10 +231,22 @@
                              l0.077,0.062c15.307-34.399,34.961-59.933,71.9-56.082C510.802,151.136,513.867,145.507,510.726,141.7z M370.903,162.627c27.904-38.017,75.307-57.751,121.144-38.743
                              c-16.072-12.613-41.381-26.674-72.329-23.977c-21.664,2.405-52.653,12.308-77.277,45.856c-13.392,19.922-16.495,52.272,4.132,72.986
                              c3.371,3.385,7.075,6.243,11.008,8.573c4.885,2.894,10.125,4.964,15.515,6.228C354.624,212.802,357.947,181.899,370.903,162.627z" />
-    </svg>
-  </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    </svg>
+    <div class="sparkles">
+      <h4>You are amazing. The lucky one is <span style="text-decoration: underline;">me</span>. Thank you for being so supportive and just being you.</h4>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
   <script>
     var leafOne = document.querySelector('.leafOne');
     var stickLine = document.querySelector('.stickLine');
@@ -77,6 +256,7 @@
     var rose2 = document.querySelector('.rose2');
     var rose3 = document.querySelector('.rose3');
     var rose4 = document.querySelector('.rose4');
+    var circle = document.querySelector('.cirlce');
 
     var lineDrawing = anime({
       targets: [leafOne, stickLine, leafTwo, leafS1, rose1, rose2, rose3, rose4],
@@ -105,7 +285,7 @@
         //Rose Three
         rose3.setAttribute("stroke", "black");
         rose3.setAttribute("fill", "none");
-        //Rose Three
+        //Rose Four
         rose4.setAttribute("stroke", "black");
         rose4.setAttribute("fill", "none");
       },
@@ -131,13 +311,20 @@
         // Rose 3
         rose3.setAttribute("fill", "#F37D79");
         rose3.setAttribute("stroke", "none");
-        // Rose 3
+        // Rose 4
         rose4.setAttribute("fill", "#D86666");
         rose4.setAttribute("stroke", "none");
       },
       autoplay: true,
     });
 
+    var drawCirlce = anime({
+      targets: '.circle',
+      strokeDashoffset: [anime.setDashoffset, 0],
+      easing: 'easeInOutSine',
+      duration: 1000,
+      delay: 4000,
+    });
 
   </script>
 </body>
